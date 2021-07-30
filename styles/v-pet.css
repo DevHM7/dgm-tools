@@ -1,0 +1,208 @@
+.div-main {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.div-v-pet {
+    background-color: #8797AD;
+    border-radius: 14px;
+}
+
+/** --- Button --- **/
+.circle {
+    border: 1px solid #596174;
+    border-radius: 40px;
+    box-shadow: inset -3px 0px 4px 0px #201e12;
+    height: 60px;
+    position: relative;
+    width: 60px;  
+}
+
+.button-shadow {
+    background-color: #170E0E;
+    border-radius: 40px;
+    height: 40px;
+    left: 10px;
+    position: relative;
+    top: 10px;
+    width: 40px;
+}
+
+.button {
+    background-color: #594841;
+    border: none;
+    border-radius: 40px;
+    box-shadow: inset -3px 0px 4px 0px #5E5351;
+    cursor: pointer;
+    height: 32px;
+    left: 4px;
+    position: relative;
+    top: 4px;
+    width: 32px;
+}
+
+.button:active {
+    background-color: #2A1F19;
+    height: 30px;
+    width: 30px;
+    top: 5px;
+    left: 5px;
+    box-shadow: inset -1px 0px 2px 0px #313131;
+}
+
+.c1 {
+    left: 50px;
+    top: 352px;
+}
+
+.c2 {
+    left: 126px;
+    top: 290px;
+}
+
+.c3 {
+    left: 200px;
+    top: 228px;
+}
+
+/** ------- **/
+
+/** --- Screen --- **/
+.screen {
+    position: absolute;
+    background-color: #E4F1F7;
+    background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+    border-radius: 14px;
+}
+/** ------- **/
+
+@media (max-width: 450px) {
+    .div-v-pet {
+        height: 430px;
+        width: 308px;
+    }
+    
+    /** --- Screen --- **/
+    .screen {
+        box-shadow: inset -2px 2px 11px 6px #313131;
+        height: 154px;
+        margin-left: 76px;
+        margin-top: 52px;
+        width: 162px;
+    }
+    /** ------- **/
+}
+
+@media (min-width: 451px) and (max-width: 870px) {
+    .div-v-pet {
+        height: 308px;
+        width: 430px;
+    }
+
+    /** --- Button --- **/
+    .circle {
+        box-shadow: inset 0px 3px 4px 0px #201e12;
+    }
+
+    .button {
+        box-shadow: inset 0px 3px 4px 0px #5E5351;
+    }
+
+    .c1 {
+        left: 350px;
+        top: 48px;        
+    }
+    
+    .c2 {
+        left: 350px;
+        top: 60px;
+    }
+    
+    .c3 {
+        left: 350px;
+        top: 78px;
+    }
+    /** ------- **/
+
+    /** --- Screen --- **/
+    .screen {
+        box-shadow: inset 3px 2px 14px 6px #313131;
+        height: 162px;
+        margin-left: 52px;
+        margin-top: 76px;
+        width: 154px;
+    }
+    /** ------- **/
+}
+
+@media (min-width: 880px) {
+    .div-v-pet {
+        border-radius: 28px;
+        height: 616px;
+        width: 860px;
+    }
+
+    /** --- Button --- **/
+    .circle {
+        border-radius: 80px;
+        box-shadow: inset 0px 3px 4px 0px #201e12;
+        height: 120px;
+        width: 120px;
+    }
+
+    .button-shadow {
+        border-radius: 80px;
+        height: 80px;
+        left: 20px;
+        top: 20px;
+        width: 80px;
+    }
+
+    .button {
+        box-shadow: inset 0px 6px 8px 0px #5E5351;
+        height: 64px;
+        left: 8px;
+        top: 8px;
+        width: 64px;
+    }
+
+    .button:active {
+        background-color: #2A1F19;
+        height: 60px;
+        width: 60px;
+        top: 10px;
+        left: 10px;
+        box-shadow: inset 0px 4px 4px 0px #313131;
+    }
+
+    .c1 {
+        left: 700px;
+        top: 96px;        
+    }
+    
+    .c2 {
+        left: 700px;
+        top: 120px;
+    }
+    
+    .c3 {
+        left: 700px;
+        top: 156px;
+    }
+    /** ------- **/
+
+    /** --- Screen --- **/
+    .screen {
+        border-radius: 28px;
+        box-shadow: inset 6px 4px 28px 12px #313131;
+        height: 324px;
+        margin-left: 104px;
+        margin-top: 152px;
+        width: 308px;
+    }
+    /** ------- **/
+}
