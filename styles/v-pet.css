@@ -71,12 +71,53 @@
 
 /** ------- **/
 
+/** --- Mini Button --- **/
+.mini {
+    height: 26px;
+    position: relative;
+    width: 26px;
+}
+/** ------- **/
+
 /** --- Screen --- **/
 .screen {
     position: absolute;
     background-color: #E4F1F7;
     background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
     border-radius: 14px;
+}
+/** ------- **/
+
+/** --- Button Lock --- **/
+.keyhole-shadow {
+    background-color: #170E0E;
+    border-radius: 14px;
+    position: relative;
+}
+
+.keyhole {
+    background-color: #7C6867;
+    border-radius: 14px;
+    cursor: pointer;
+    position: relative;
+}
+
+.hole {
+    border-radius: 40px;
+    position: relative;
+}
+
+.tooth {
+    background-color: #7C6867;
+    position: relative;
+}
+
+.keyhole:active > .hole {
+    box-shadow: inset -2px 1px 3px 1px #313131;
+}
+
+.keyhole:active > .tooth {
+    box-shadow: inset 1px 0px 0px 0px #313131, 2px 0px 0px 0px #313131, inset 0px -1px 0px 0px #313131;
 }
 /** ------- **/
 
@@ -93,6 +134,59 @@
         margin-left: 76px;
         margin-top: 52px;
         width: 162px;
+    }
+    /** ------- **/
+
+    /** --- Mini Button --- **/
+    .mini {
+        left: 105px;
+        top: 156px;
+    }
+
+    .mini > .button-shadow {
+        height: 20px;
+        left: 2px;
+        top: 3px;
+        width: 20px;
+    }
+
+    .mini > .button-shadow > .button {
+        height: 16px;
+        left: 2px;
+        top: 2px;
+        width: 16px;
+    }
+    /** ------- **/
+
+    /** --- Button Lock --- **/
+    .keyhole-shadow {
+        top: 30px;
+        height: 56px;
+        left: 115px;
+        width: 78px;
+    }
+
+    .keyhole {
+        height: 55px;
+        top: 1px;
+        width: 76px;
+    }
+
+    .hole {
+        box-shadow: inset -1px 1px 0px 1px #313131;
+        height: 32px;
+        left: 26px;
+        top: 8px;
+        width: 32px;
+    }
+
+    .tooth {
+        bottom: 18px;
+        box-shadow: inset 1px 0px 0px 0px #313131, 1px 0px 0px 0px #313131, 0px 1px 0px 0px #807272;
+        height: 20px;
+        left: 10px;
+        transform: rotate(90deg) perspective(10px) rotateX(12deg);
+        width: 28px;
     }
     /** ------- **/
 }
@@ -114,17 +208,38 @@
 
     .c1 {
         left: 350px;
-        top: 48px;        
+        top: 44px;        
     }
     
     .c2 {
         left: 350px;
-        top: 60px;
+        top: 58px;
     }
     
     .c3 {
         left: 350px;
-        top: 78px;
+        top: 74px;
+    }
+    /** ------- **/
+
+    /** --- Mini Button --- **/
+    .mini {
+        left: 342px;
+        bottom: 10px;
+    }
+
+    .mini > .button-shadow {
+        height: 20px;
+        left: 3px;
+        top: 4px;
+        width: 20px;
+    }
+
+    .mini > .button-shadow > .button {
+        height: 16px;
+        left: 2px;
+        top: 2px;
+        width: 16px;
     }
     /** ------- **/
 
@@ -135,6 +250,38 @@
         margin-left: 52px;
         margin-top: 76px;
         width: 154px;
+    }
+    /** ------- **/
+
+    /** --- Button Lock --- **/
+    .keyhole-shadow {
+        bottom: 99px;
+        height: 78px;
+        left: 234px;
+        width: 56px;
+    }
+
+    .keyhole {
+        border-radius: 14px;
+        height: 76px;
+        top: 1px;
+        width: 55px;
+    }
+
+    .hole {
+        box-shadow: inset -1px 1px 0px 1px #313131;
+        height: 32px;
+        left: 4px;
+        width: 32px;
+    }
+
+    .tooth {
+        bottom: 8px;
+        box-shadow: inset 1px 0px 0px 0px #313131, 1px 0px 0px 0px #313131, 0px 1px 0px 0px #807272;
+        height: 20px;
+        left: 5px;
+        transform: perspective(10px) rotateX(12deg);
+        width: 28px;
     }
     /** ------- **/
 }
@@ -191,7 +338,30 @@
     
     .c3 {
         left: 700px;
-        top: 156px;
+        top: 144px;
+    }
+    /** ------- **/
+
+    /** --- Mini Button --- **/
+    .mini {
+        bottom: 14px;
+        height: 48px;
+        left: 684px;
+        width: 48px;
+    }
+
+    .mini > .button-shadow {
+        height: 40px;
+        left: 4px;
+        top: 5px;
+        width: 40px;
+    }
+
+    .mini > .button-shadow > .button {
+        height: 32px;
+        left: 4px;
+        top: 5px;
+        width: 32px;
     }
     /** ------- **/
 
@@ -203,6 +373,37 @@
         margin-left: 104px;
         margin-top: 152px;
         width: 308px;
+    }
+    /** ------- **/
+
+    /** --- Button Lock --- **/
+    .keyhole-shadow {
+        bottom: 174px;
+        height: 156px;
+        left: 468px;
+        width: 112px;
+    }
+
+    .keyhole {
+        height: 156px;
+        top: 2px;
+        width: 112px;
+    }
+
+    .hole {
+        box-shadow: inset -1px 1px 0px 1px #313131;
+        height: 64px;
+        left: 17px;
+        width: 64px;
+    }
+
+    .tooth {
+        bottom: 14px;
+        box-shadow: inset 1px 0px 0px 0px #313131, 1px 0px 0px 0px #313131, 0px 1px 0px 0px #807272;
+        height: 40px;
+        left: 20px;
+        transform: perspective(16px) rotateX(12deg);
+        width: 56px;
     }
     /** ------- **/
 }
