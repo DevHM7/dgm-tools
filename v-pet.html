@@ -6,24 +6,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>v-pet</title>
         <link rel="stylesheet" href="styles/v-pet.css">
+        <script src="scripts/v-pet.js"></script>
     </head>
-    <body>
+    <body oncontextmenu="return false;">
         <div class="div-main">
             <div class="div-v-pet">
                 <div class="screen">
-
+                    <img class="digimon" id="dgmImg" src="img/sprites/dm1/botamon.png" alt="Digimon">
                 </div>
-                <div class="circle c1">
+                <div class="circle c1" id="btnNext">
                     <div class="button-shadow">
                         <button class="button"></button>
                     </div>
                 </div>
-                <div class="circle c2">
+                <div class="circle c2" id="btnPrev">
                     <div class="button-shadow">
                         <button class="button"></button>
                     </div>
                 </div>
-                <div class="circle c3">
+                <div class="circle c3" id="btnCan">
                     <div class="button-shadow">
                         <button class="button"></button>
                     </div>
@@ -33,13 +34,14 @@
                         <button class="button"></button>
                     </div>
                 </div>
-                <div class="keyhole-shadow">
+                <div class="keyhole-shadow" id="conBtn">
                     <button class="keyhole">
                         <div class="hole"></div>
                         <div class="tooth"></div>
                     </button>
                 </div>
             </div>
+            <p>The sprite images are © Digimon</p>
         </div>
     </body>
 </html>

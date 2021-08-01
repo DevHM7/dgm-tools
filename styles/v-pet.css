@@ -121,6 +121,24 @@
 }
 /** ------- **/
 
+/** --- digimon --- **/
+.digimon {
+    position: relative;
+}
+
+.evolved {
+    background-color: #32cabb2b;
+    border-radius: 14px;
+    border: 1px solid #add8d894;
+}
+
+.devolved {
+    background-color: #ca323238;
+    border-radius: 14px;
+    border: 1px solid #ec424294;
+}
+/** ------- **/
+
 @media (max-width: 450px) {
     .div-v-pet {
         height: 430px;
@@ -187,6 +205,14 @@
         left: 10px;
         transform: rotate(90deg) perspective(10px) rotateX(12deg);
         width: 28px;
+    }
+    /** ------- **/
+
+    /** --- digimon --- **/
+    .digimon {
+        left: 5px;
+        top: 9px;
+        transform: rotate(90deg);
     }
     /** ------- **/
 }
@@ -282,6 +308,13 @@
         left: 5px;
         transform: perspective(10px) rotateX(12deg);
         width: 28px;
+    }
+    /** ------- **/
+
+    /** --- digimon --- **/
+    .digimon {
+        left: 5px;
+        top: 9px;
     }
     /** ------- **/
 }
@@ -404,6 +437,14 @@
         left: 20px;
         transform: perspective(16px) rotateX(12deg);
         width: 56px;
+    }
+    /** ------- **/
+
+    /** --- digimon --- **/
+    .digimon {
+        left: 82px;
+        top: 90px;
+        transform: scale(2);
     }
     /** ------- **/
 }
