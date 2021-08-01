@@ -9,6 +9,7 @@
 
 .div-v-pet {
     background-color: #8797AD;
+    border: 1px solid #0c485a;
     border-radius: 14px;
 }
 
@@ -93,6 +94,7 @@
     background-color: #170E0E;
     border-radius: 14px;
     position: relative;
+    z-index: 2
 }
 
 .keyhole {
@@ -136,6 +138,28 @@
     background-color: #ca323238;
     border-radius: 14px;
     border: 1px solid #ec424294;
+}
+/** ------- **/
+
+/** --- Horizontal line --- **/
+.horizontal-line {
+    background-color: #927D78;
+    border: 1px solid #4e515a;
+    border-radius: 6px;
+    box-shadow: 2px -2px 0px 0px #201e12, 1px 2px 5px 0px #201e12;
+    position: relative; 
+    z-index: 2;
+}
+/** ------- **/
+
+/** --- Vertical line --- **/
+.vertical-line {
+    background-color: #927D78;
+    border: 1px solid #4e515a;
+    border-radius: 6px;
+    box-shadow: 2px -2px 0px 0px #201e12, 1px 2px 5px 0px #201e12;
+    position: relative; 
+    z-index: 1;
 }
 /** ------- **/
 
@@ -213,6 +237,41 @@
         left: 5px;
         top: 9px;
         transform: rotate(90deg);
+    }
+    /** ------- **/
+
+    /** --- Horizontal line --- **/
+    .horizontal-line {
+        box-shadow: -1px 2px 5px 0px #201e12, 2px 2px 0px 0px #201e12;
+        height: 280px;
+        width: 15px;  
+    }
+
+    .l1 {
+        left: 250px;
+        top: -275px;
+    }
+
+    .l2 {
+        left: 44px;
+        top: -558px;
+    }
+    /** ------- **/
+
+    /** --- Vertical line --- **/
+    .vertical-line {
+        box-shadow: -1px 2px 5px 0px #201e12, 2px 2px 0px 0px #201e12;
+        height: 15px;
+        left: 50px;
+        width: 212px; 
+    }
+
+    .l3 {
+        top: -835px;
+    }
+
+    .l4 {
+        top: -592px;
     }
     /** ------- **/
 }
@@ -315,6 +374,39 @@
     .digimon {
         left: 5px;
         top: 9px;
+    }
+    /** ------- **/
+
+    /** --- Horizontal line --- **/
+    .horizontal-line {
+        height: 15px;
+        right: 5px;  
+        width: 268px;  
+    }
+
+    .l1 {
+        bottom: 245px; 
+    }
+
+    .l2 {
+        bottom: 60px;
+    }
+    /** ------- **/
+
+    /** --- Vertical line --- **/
+    .vertical-line {
+        height: 212px;
+        right: 0px;
+        width: 15px; 
+    }
+
+    .l3 {
+        bottom: 278px;
+    }
+
+    .l4 {
+        top: -492px;
+        left: 247px;
     }
     /** ------- **/
 }
@@ -445,6 +537,39 @@
         left: 82px;
         top: 90px;
         transform: scale(2);
+    }
+    /** ------- **/
+
+    /** --- Horizontal line --- **/
+    .horizontal-line {
+        height: 30px;
+        right: 10px;  
+        width: 536px;  
+    }
+
+    .l1 {
+        bottom: 480px; 
+    }
+
+    .l2 {
+        bottom: 106px;
+    }
+    /** ------- **/
+
+    /** --- Vertical line --- **/
+    .vertical-line {
+        height: 424px;
+        right: 0px;
+        width: 30px; 
+    }
+
+    .l3 {
+        bottom: 542px;
+    }
+
+    .l4 {
+        top: -970px;
+        left: 494px;
     }
     /** ------- **/
 }
