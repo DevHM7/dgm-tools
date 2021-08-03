@@ -81,10 +81,9 @@ const dgmEvoLn = {
     }
 };
 
-var level = nxtLvl = 0;
-var nxtDig = -1;
-var actDig = 0
-level = 0;
+var level = actDig = nxtLvl = 0;
+var nxtDig = prevDig = -1;
+var sEvolved = null;
 
 function changeSprite(t_name, addClass, removeClass, exRemoveClass) {
     document.getElementById('dgmImg').src = `img/sprites/dm1/${t_name}.webp`;
@@ -96,90 +95,100 @@ function changeSprite(t_name, addClass, removeClass, exRemoveClass) {
 window.onload = () => {
 
     document.getElementById('btnNext').onclick = () => {
-        if(dgmEvoLn[level][actDig].next == null)
-            return 0;
-        let index = dgmEvoLn[level][actDig].next.indexOf(nxtDig);
-        if(index == -1)
+        sEvolved = 'e';
+        if ( dgmEvoLn[level][actDig].next == null )
+            return;
+        if ( nxtDig == -1 )
             nxtDig = dgmEvoLn[level][actDig].next[0];
         else {
-            nxtDig = dgmEvoLn[level][actDig].next[index + 1];
-            if(nxtDig == -1 || nxtDig == undefined)
+            let index = dgmEvoLn[level][actDig].next.indexOf(nxtDig) + 1;
+            nxtDig = dgmEvoLn[level][actDig].next[index]
+            if ( nxtDig == undefined )
                 nxtDig = dgmEvoLn[level][actDig].next[0];
         }
         nxtLvl = level + 1;
-        changeSprite(dgmEvoLn[nxtLvl][nxtDig].name, 'evolved', 'devolved', null);
+        changeSprite(dgmEvoLn[nxtLvl][nxtDig].name, 'evolved', 'devolved');
     }
     
     document.getElementById('btnNext').oncontextmenu = () => {
-        if(dgmEvoLn[level][actDig].next == null)
-            return 0;
-        let index = dgmEvoLn[level][actDig].next.indexOf(nxtDig);
-        if(index == -1) {
+        let index = 0;
+        sEvolved = 'e';
+        if ( dgmEvoLn[level][actDig].next == null )
+            return;
+        if ( nxtDig == -1 ) {
             index = dgmEvoLn[level][actDig].next.length - 1;
             nxtDig = dgmEvoLn[level][actDig].next[index];
         }
         else {
-            nxtDig = dgmEvoLn[level][actDig].next[--index];
-            if(nxtDig == -1 || nxtDig == undefined) {
+            index = dgmEvoLn[level][actDig].next.indexOf(nxtDig) - 1;
+            nxtDig = dgmEvoLn[level][actDig].next[index];
+            if ( nxtDig == undefined ) {
                 index = dgmEvoLn[level][actDig].next.length - 1;
                 nxtDig = dgmEvoLn[level][actDig].next[index];
             }
         }
         nxtLvl = level + 1;
-        changeSprite(dgmEvoLn[nxtLvl][nxtDig].name, 'evolved', 'devolved', null);
+        changeSprite(dgmEvoLn[nxtLvl][nxtDig].name, 'evolved', 'devolved');
     }
 
     document.getElementById('btnPrev').onclick = () => {
-        if(dgmEvoLn[level][actDig].prev == null)
-            return 0;
-        let index = dgmEvoLn[level][actDig].prev.indexOf(nxtDig);
-        if(index == -1)
-            nxtDig = dgmEvoLn[level][actDig].prev[0];
+        sEvolved = 'd';
+        if ( dgmEvoLn[level][actDig].prev == null )
+            return;
+        if ( prevDig == -1 )
+            prevDig = dgmEvoLn[level][actDig].prev[0];
         else {
-            nxtDig = dgmEvoLn[level][actDig].next[index + 1];
-            if(nxtDig == -1 || nxtDig == undefined)
-                nxtDig = dgmEvoLn[level][actDig].prev[0];
+            let index = dgmEvoLn[level][actDig].prev.indexOf(prevDig) + 1;
+                prevDig = dgmEvoLn[level][actDig].prev[index]
+            if ( prevDig == undefined )
+                prevDig = dgmEvoLn[level][actDig].prev[0];
         }
         nxtLvl = level - 1;
-        changeSprite(dgmEvoLn[nxtLvl][nxtDig].name, 'devolved', 'evolved');
+        changeSprite(dgmEvoLn[nxtLvl][prevDig].name, 'devolved', 'evolved');
     }
     
     document.getElementById('btnPrev').oncontextmenu = () => {
+        sEvolved = 'd';
         if(dgmEvoLn[level][actDig].prev == null)
             return 0;
-        let index = dgmEvoLn[level][actDig].prev.indexOf(nxtDig);
+        let index = dgmEvoLn[level][actDig].prev.indexOf(prevDig);
         if(index == -1) {
             index = dgmEvoLn[level][actDig].prev.length - 1;
-            nxtDig = dgmEvoLn[level][actDig].prev[index];
+            prevDig = dgmEvoLn[level][actDig].prev[index];
         }
         else {
-            nxtDig = dgmEvoLn[level][actDig].prev[--index];
-            if(nxtDig == -1 || nxtDig == undefined) {
+            prevDig = dgmEvoLn[level][actDig].prev[--index];
+            if(prevDig == -1 || prevDig == undefined) {
                 index = dgmEvoLn[level][actDig].prev.length - 1;
-                nxtDig = dgmEvoLn[level][actDig].prev[index];
+                prevDig = dgmEvoLn[level][actDig].prev[index];
             }
         }
         nxtLvl = level - 1;
-        changeSprite(dgmEvoLn[nxtLvl][nxtDig].name, 'devolved', 'evolved');
+        changeSprite(dgmEvoLn[nxtLvl][prevDig].name, 'devolved', 'evolved');
     }
 
     document.getElementById('conBtn').onclick = () => {
-        if(nxtDig == -1)
-            return 0;
+        if(sEvolved == null)
+            return;
+        else if( sEvolved == 'e' )
+            actDig = nxtDig;
+        else
+            actDig = prevDig;
         level = nxtLvl;
-        actDig = nxtDig;
         changeSprite(dgmEvoLn[level][actDig].name, null, 'evolved', 'devolved');
-        nxtDig = -1;
+        nxtDig = prevDig = -1;
     }
 
     document.getElementById('btnCan').onclick = () => {
         changeSprite(dgmEvoLn[level][actDig].name, null, 'evolved', 'devolved');
-        nxtDig = -1;
+        nxtDig = prevDig = -1;
+        sEvolved = null;
     }
 
     document.getElementById('btnReset').onclick = () => {
         level = nxtLvl = actDig = 0;
-        nxtDig = -1;
+        nxtDig = prevDig = -1;
+        sEvolved = null;
         changeSprite('botamon', null, 'evolved', 'devolved');
     }
 }
