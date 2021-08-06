@@ -86,10 +86,24 @@ var nxtDig = prevDig = -1;
 var sEvolved = null;
 
 function changeSprite(t_name, addClass, removeClass, exRemoveClass) {
-    document.getElementById('dgmImg').src = `img/sprites/dm1/${t_name}.webp`;
-    document.getElementById('dgmImg').classList.remove(removeClass);
-    document.getElementById('dgmImg').classList.remove(exRemoveClass);
-    document.getElementById('dgmImg').classList.add(addClass);
+    let sprite = document.getElementById('dgmImg');
+    sprite.src = `img/sprites/dm1/${t_name}.webp`;
+    sprite.classList.remove(removeClass);
+    sprite.classList.remove(exRemoveClass);
+    sprite.classList.add(addClass);
+}
+
+function changeSkin(t_skin) {
+    let vPet = document.getElementById('vPet');
+    let skins = ['v-pet-red', 'v-pet-gray', 'v-pet-yellow'];
+    let skin = vPet.classList[1];
+    vPet.classList.remove(skin);
+    vPet.classList.add(skins[t_skin]);
+    console.log(document.getElementById('vPet').classList, skins[t_skin])
+}
+
+function changeVPet(t_vPet) {
+    changeSkin(t_vPet);
 }
 
 window.onload = () => {

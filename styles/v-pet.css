@@ -7,9 +7,30 @@
     justify-content: center;
 }
 
-.div-v-pet {
+.v-pet-gray {
     background-color: #8797AD;
     border: 1px solid #0c485a;
+}
+
+.v-pet-red {
+    background-color: #D84341;
+    border: 1px solid #985352;
+}
+
+.v-pet-yellow {
+    background-color: #F3ED48;
+    border: 1px solid #BB9754;
+}
+
+.v-pet-red::after,.v-pet-yellow::after {
+    background-image: none !important;
+}
+
+.lh-grey {
+    background-color: #879096
+}
+
+.div-v-pet {
     border-radius: 14px;
     height: 308px;
     position: relative;
