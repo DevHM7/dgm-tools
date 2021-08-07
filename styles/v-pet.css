@@ -7,6 +7,16 @@
     justify-content: center;
 }
 
+.v-pet-blue {
+    background-color: #3B5B9e;
+    border: 1px solid #2D3952;
+}
+
+.v-pet-green {
+    background-color: #46594E;
+    border: 1px solid #2E3E35;
+}
+
 .v-pet-gray {
     background-color: #8797AD;
     border: 1px solid #0c485a;
@@ -22,7 +32,7 @@
     border: 1px solid #BB9754;
 }
 
-.v-pet-red::after,.v-pet-yellow::after {
+.v-pet-red::after,.v-pet-yellow::after, .v-pet-blue::after {
     background-image: none !important;
 }
 

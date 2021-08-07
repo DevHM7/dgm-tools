@@ -1,4 +1,4 @@
-const dgmEvoLn = {
+/*const dgmEvoLn = {
     0: {
         0: {
             name: 'botamon',
@@ -79,27 +79,36 @@ const dgmEvoLn = {
             prev: [6]
         }
     }
-};
+};*/
 
 var level = actDig = nxtLvl = 0;
 var nxtDig = prevDig = -1;
 var sEvolved = null;
+var dgmEvoLn = data[0];
+var dir = 'img/sprites/dm';
+var folder = 1;
 
 function changeSprite(t_name, addClass, removeClass, exRemoveClass) {
     let sprite = document.getElementById('dgmImg');
-    sprite.src = `img/sprites/dm1/${t_name}.webp`;
+    sprite.src = `${dir}${folder}/${t_name}.webp`;
     sprite.classList.remove(removeClass);
     sprite.classList.remove(exRemoveClass);
     sprite.classList.add(addClass);
 }
 
-function changeSkin(t_skin) {
+function changeSkin(t_vPet) {
     let vPet = document.getElementById('vPet');
-    let skins = ['v-pet-red', 'v-pet-gray', 'v-pet-yellow'];
+    let skins = ['v-pet-red','v-pet-blue','v-pet-yellow','v-pet-green','v-pet-gray'];
     let skin = vPet.classList[1];
     vPet.classList.remove(skin);
-    vPet.classList.add(skins[t_skin]);
-    console.log(document.getElementById('vPet').classList, skins[t_skin])
+    vPet.classList.add(skins[t_vPet]);
+    dgmEvoLn = data[t_vPet];
+    console.log(dgmEvoLn)
+    level = actDig = nxtLvl = 0;
+    nxtDig = prevDig = -1;
+    sEvolved = null;
+    folder = t_vPet + 1;
+    changeSprite(dgmEvoLn[0][0].name, null, 'evolved', 'devolved');
 }
 
 function changeVPet(t_vPet) {
@@ -203,6 +212,6 @@ window.onload = () => {
         level = nxtLvl = actDig = 0;
         nxtDig = prevDig = -1;
         sEvolved = null;
-        changeSprite('botamon', null, 'evolved', 'devolved');
+        changeSprite(dgmEvoLn[0][0].name, null, 'evolved', 'devolved');
     }
 }
