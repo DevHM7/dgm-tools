@@ -1,86 +1,3 @@
-/*const dgmEvoLn = {
-    0: {
-        0: {
-            name: 'botamon',
-            next: [0],
-            prev: null
-        }
-    },
-    1: {
-        0: {
-            name: 'koromon',
-            next: [0,1],
-            prev: [0]
-        }
-    },
-    2: {
-        0: {
-            name: 'agumon',
-            next: [0,1,2,3,6],
-            prev: [0]
-        },
-        1: {
-            name: 'betamon',
-            next: [2,3,4,5,6],
-            prev: [0]
-        }
-    },
-    3: {
-        0: {
-            name: 'greymon',
-            next: [0],
-            prev: [0]
-        },
-        1: {
-            name: 'tyranomon',
-            next: [1],
-            prev: [0]
-        },
-        2: {
-            name: 'devimon',
-            next: [0],
-            prev: [0,1]
-        },
-        3: {
-            name: 'meramon',
-            next: [1],
-            prev: [0,1]
-        },
-        4: {
-            name: 'airdramon',
-            next: [0],
-            prev: [1]
-        },
-        5: {
-            name: 'seadramon',
-            next: [1],
-            prev: [1]
-        },
-        6: {
-            name: 'numemon',
-            next: [2],
-            prev: [0,1]
-        }
-    },
-    4: {
-        0: {
-            name: 'metalgreymon-virus',
-            next: null,
-            prev: [0,2,4],
-        },
-        1: {
-            name: 'mamemon',
-            next: null,
-            prev: [1,3,5]
-        },
-        2: {
-            name: 'monzaemon',
-            next: null,
-            prev: [6]
-        }
-    }
-};*/
-
 var level = actDig = nxtLvl = 0;
 var nxtDig = prevDig = -1;
 var sEvolved = null;
@@ -103,7 +20,6 @@ function changeSkin(t_vPet) {
     vPet.classList.remove(skin);
     vPet.classList.add(skins[t_vPet]);
     dgmEvoLn = data[t_vPet];
-    console.log(dgmEvoLn)
     level = actDig = nxtLvl = 0;
     nxtDig = prevDig = -1;
     sEvolved = null;
