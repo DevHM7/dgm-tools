@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/v-pet.css">
         <script src="scripts/data.js"></script>
+        <script src="scripts/base.js"></script>
         <script src="scripts/v-pet.js"></script>
     </head>
     <body oncontextmenu="return false;">
@@ -113,11 +114,20 @@
             </div>
             <p class="copyright">The sprite images are © Digimon</p>
         </div>
-        <div class="menu-device" onclick="document.querySelector('.menu-device').classList.toggle('grow-menu')">
+        <div class="close-button small-button" onclick="showMenu()">
+
+        </div>
+        <div class="menu-device" onclick="showMenu()">
             <div class="nav-device">
-                <div class="nav-device-sub1"></div>
-                <div class="nav-device-sub2"></div>
-                <div class="nav-device-sub3"></div>
+                <div class="nav-device-sub1 nav-device-sub">
+                    <img src="./img/icons/dm.webp" alt="Electronic Pets">
+                    <p>Electronic Pets</p>
+                </div>
+                <div class="nav-device-sub2 nav-device-sub">
+                    <img src="./img/icons/dv.webp" alt="Digivices">
+                    <p>Digivices</p>
+                </div>
+                <div class="nav-device-sub3 nav-device-sub"></div>
             </div>
         </div>
     </body>
