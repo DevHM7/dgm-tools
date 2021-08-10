@@ -40,4 +40,8 @@ Everything else, and the programming code, is governed by the [MIT license](http
 
 # 🎁 Special Thanks
 
+<<<<<<< HEAD
 [wikimon](https://wikimon.net/) for providing all the information about the evolutions
+=======
+[wikimon](https://wikimon.net/) for providing all the information about the evolutions
+>>>>>>> c038c3e7a9490b9fb57b46b1c1d52a4b14ecd631
