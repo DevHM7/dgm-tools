@@ -1,0 +1,101 @@
+.pendulum {
+    background-color: #C9C9CC;
+    clip-path: polygon(20% 0, 80% 0, 100% 10%, 100% 90%, 80% 100%, 20% 100%, 0 90%, 0 10%);
+}
+
+.pendulum::after {
+    background-image: none !important;
+}
+
+.margin-unic {
+    border: 50px solid #316AAC;
+    border-radius: 50px;
+    box-shadow: inset 0px 0px 25px 10px #316AAC;
+    height: 262px;
+    margin-left: 48px;
+    margin-top: 74px;
+    position: absolute;
+    width: 262px;
+    z-index: 1;
+}
+
+.slot {
+    background-color: #C9C9CC;
+    clip-path: ellipse(50% 50% at 50% 50%);
+    height: 54px;
+    position: absolute;
+    width: 16px;
+    z-index: 2;
+}
+
+.sl1 {
+    left: -57px;
+    top: 35px;
+}
+
+.sl2 {
+    left: -57px;
+    top: 208px;
+}
+
+.sl3 {
+    left: 304px;
+    top: 35px;
+}
+
+.sl4 {
+    left: 304px;
+    top: 208px;
+}
+
+.horn {
+    background-color: #316aac;
+    height: 32px;
+    position: absolute;
+    width: 32px;
+    z-index: 2;
+}
+
+.hr1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: inset 0px -2px 6px 2px #29419A;
+    left: 32px;
+    top: -65px;
+}
+
+.hr2 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: inset 0px -2px 6px 2px #29419A;
+    left: 200px;
+    top: -65px;
+}
+
+.hr3 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: inset 0px 2px 6px 2px #29419a;
+    left: 32px;
+    top: 294px;
+}
+
+.hr4 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: inset 0px 2px 6px 2px #29419a;
+    left: 200px;
+    top: 294px;
+}
+
+.shadow-button-block {
+    border-bottom-left-radius: 110px;
+    border-top-left-radius: 110px;
+    box-shadow: inset 5px 1px 5px 0px #787979;
+    height: 362px;
+    margin-left: 484px;
+    margin-top: 68px;
+    position: absolute;
+    width: 180px;
+    z-index: 2;
+}

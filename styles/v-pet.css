@@ -44,10 +44,10 @@
 
 .div-v-pet {
     border-radius: 14px;
-    height: 308px;
+    height: 492px;
     position: relative;
     top: 10px;
-    width: 430px;
+    width: 688px;
     z-index: 0;
 }
 
@@ -154,16 +154,21 @@
 
 /** --- Screen --- **/
 .screen {
+    align-content: center;
+    align-items: flex-end;
     background-color: #E4F1F7;
     background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
     border-radius: 14px;
     box-shadow: inset 3px 2px 14px 6px #313131;
-    height: 162px;
-    margin-left: 52px;
-    margin-top: 76px;
+    display: flex;
+    flex-direction: row;
+    height: 242px;
+    justify-content: center;
+    margin-left: 108px;
+    margin-top: 132px;
     position: absolute;
-    width: 154px;
-    z-index: 3;
+    width: 242px;
+    z-index: 1;
 }
 /** ------- **/
 
@@ -221,9 +226,8 @@
 
 /** --- digimon --- **/
 .digimon {
-    left: 5px;
-    position: relative;
-    top: 9px;
+    position: absolute;
+    z-index: 1;
 }
 
 .evolved {
@@ -293,8 +297,8 @@
     .div-v-pet {
         position: relative;
         top: 68px;
-        transform: rotate(90deg);
-        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg) scale(0.6);
+        -webkit-transform: rotate(90deg) scale(0.6);
     }
 }
 
@@ -307,7 +311,5 @@
     .div-v-pet {
         position: relative;
         top: 150px;
-        transform: scale(1.6);
-        -webkit-transform: scale(1.6);
     }
 }
