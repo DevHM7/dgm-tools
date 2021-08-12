@@ -21,7 +21,6 @@
 
 .slot {
     background-color: #C9C9CC;
-    clip-path: ellipse(50% 50% at 50% 50%);
     height: 54px;
     position: absolute;
     width: 16px;
@@ -29,21 +28,25 @@
 }
 
 .sl1 {
+    clip-path: polygon(100% 10%, 100% 90%, 40% 100%, 40% 0);
     left: -57px;
     top: 35px;
 }
 
 .sl2 {
+    clip-path: polygon(100% 10%, 100% 90%, 40% 100%, 40% 0);
     left: -57px;
     top: 208px;
 }
 
 .sl3 {
+    clip-path: polygon(0% 10%, 0% 90%, 60% 100%, 60% 0);
     left: 304px;
     top: 35px;
 }
 
 .sl4 {
+    clip-path: polygon(0% 10%, 0% 90%, 60% 100%, 60% 0);
     left: 304px;
     top: 208px;
 }
@@ -98,4 +101,115 @@
     position: absolute;
     width: 180px;
     z-index: 2;
+}
+
+.shadow-button-hole {
+    border-radius: 50px;
+    border: 1px solid #000000;
+    box-shadow: inset 2px 2px 20px 0px #000000;
+    height: 95px;
+    margin-left: 50px;
+    position: absolute;
+    width: 95px;
+    z-index: 2;
+}
+
+.sbh-1 {
+    margin-top: 20px;
+}
+
+.sbh-2 {
+    margin-top: 135px;
+}
+
+.sbh-3 {
+    margin-top: 250px;
+}
+
+.shadow-mini-button-hole {
+    border-radius: 50px;
+    border: 1px solid #000000;
+    box-shadow: inset 2px 2px 20px 0px #000000;
+    height: 46px;
+    margin-left: 20px;
+    margin-top: 217px;
+    position: absolute;
+    width: 46px;
+    z-index: 2;
+}
+
+.shadow-button-input {
+    background-color: #000000;
+    border-radius: 40px;
+    height: 85px;
+    margin-left: 5px;
+    margin-top: 5px;
+    position: absolute;
+    width: 85px;
+    z-index: 2;
+}
+
+.shadow-mini-button-input {
+    background-color: #000000 ;
+    border-radius: 50px;
+    height: 40px;
+    margin-left: 3px;
+    margin-top: 3px;
+    position: absolute;
+    width: 40px;
+    z-index: 2;
+}
+
+.shadow-ventilation-block {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: inset -1px 7px 20px 0px #787979;
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    justify-content: center;
+    margin-left: 137px;
+    margin-top: 472px;
+    position: absolute;
+    width: 413px;
+    z-index: 2;
+}
+
+.ventilation-block {
+    background-color: #787979;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    width: 25px;
+}
+
+.shadow-ventilation-block-bottom-left {
+    background-color: #787979;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: inset -7px 0px 20px 2px #9c9b9bde;
+    height: 20px;
+    margin-left: 7px;
+    margin-top: 450px;
+    position: absolute;
+    transform: rotateZ(20deg);
+    width: 138px;
+    z-index: 3;
+}
+
+.shadow-ventilation-block-bottom-right {
+    background-color: #787979;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: inset 7px 0px 20px 2px #9c9b9bde;
+    height: 20px;
+    margin-left: 541px;
+    margin-top: 449px;
+    position: absolute;
+    transform: rotateZ(340deg);
+    width: 138px;
+    z-index: 3;
 }
