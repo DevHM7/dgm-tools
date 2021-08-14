@@ -1,6 +1,6 @@
 .pendulum {
     background-color: #C9C9CC;
-    clip-path: polygon(20% 0, 80% 0, 100% 10%, 100% 90%, 80% 100%, 20% 100%, 0 90%, 0 10%);
+    clip-path: polygon(22% 0, 78% 0, 98% 8%, 100% 12%, 100% 26%, 100% 50%, 100% 88%, 98% 92%, 78% 100%, 22% 100%, 2% 92%, 0 88%, 0 50%, 0 26%, 0 12%, 2% 8%);
 }
 
 .pendulum::after {
@@ -10,6 +10,7 @@
 .margin-unic {
     border: 50px solid #316AAC;
     border-radius: 50px;
+    box-shadow: -1px 0px 0px 1px #020510, 1px 2px 0px 1px #020510;
     height: 262px;
     margin-left: 48px;
     margin-top: 74px;
@@ -17,6 +18,7 @@
     width: 262px;
     z-index: 1;
 }
+
 .margin-inner {
     align-content: center;
     align-items: center;
@@ -48,33 +50,34 @@
 
 .slot {
     background-color: #C9C9CC;
+    border: 1px solid black;
     height: 54px;
     position: absolute;
-    width: 16px;
+    width: 20px;
     z-index: 2;
 }
 
 .sl1 {
-    clip-path: polygon(100% 10%, 100% 90%, 40% 100%, 40% 0);
-    left: -57px;
+    clip-path: polygon(100% 10%, 100% 90%, 43% 100%, 43% 0);
+    left: -61px;
     top: 35px;
 }
 
 .sl2 {
-    clip-path: polygon(100% 10%, 100% 90%, 40% 100%, 40% 0);
-    left: -57px;
+    clip-path: polygon(100% 10%, 100% 90%, 43% 100%, 43% 0);
+    left: -61px;
     top: 208px;
 }
 
 .sl3 {
-    clip-path: polygon(0% 10%, 0% 90%, 60% 100%, 60% 0);
-    left: 304px;
+    clip-path: polygon(0% 10%, 0% 90%, 57% 100%, 57% 0);
+    left: 302px;
     top: 35px;
 }
 
 .sl4 {
-    clip-path: polygon(0% 10%, 0% 90%, 60% 100%, 60% 0);
-    left: 304px;
+    clip-path: polygon(0% 10%, 0% 90%, 57% 100%, 57% 0);
+    left: 302px;
     top: 208px;
 }
 
@@ -89,33 +92,33 @@
 .hr1 {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    box-shadow: inset 0px -2px 6px 2px #29419A;
+    box-shadow: inset 0px -2px 6px 2px #29419A, 0px -1px 0px 1px #040404;
     left: 32px;
-    top: -65px;
+    top: -70px;
 }
 
 .hr2 {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    box-shadow: inset 0px -2px 6px 2px #29419A;
+    box-shadow: inset 0px -2px 6px 2px #29419A, 0px -1px 0px 1px #040404;
     left: 200px;
-    top: -65px;
+    top: -70px;
 }
 
 .hr3 {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: inset 0px 2px 6px 2px #29419a;
+    box-shadow: inset 0px 2px 6px 2px #29419a, 0px 1px 0px 1px #040404;
     left: 32px;
-    top: 294px;
+    top: 299px;
 }
 
 .hr4 {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: inset 0px 2px 6px 2px #29419a;
+    box-shadow: inset 0px 2px 6px 2px #29419a, 0px 1px 0px 1px #040404;
     left: 200px;
-    top: 294px;
+    top: 299px;
 }
 
 .shadow-button-block {
@@ -220,6 +223,7 @@
 }
 
 .shadow-ventilation-block {
+    background-color: #c9c9cc;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     box-shadow: inset -1px 7px 20px 0px #787979;
@@ -245,30 +249,119 @@
     width: 25px;
 }
 
-.shadow-ventilation-block-bottom-left {
-    background-color: #787979;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-    box-shadow: inset -7px 0px 20px 2px #9c9b9bde;
-    height: 20px;
-    margin-left: 7px;
-    margin-top: 450px;
+.shadow-right {
+    background-color: #BCB7BD;
+    height: 400px;
+    margin-top: 43px;
     position: absolute;
-    transform: rotateZ(20deg);
-    width: 138px;
+    width: 20px;
     z-index: 3;
 }
 
-.shadow-ventilation-block-bottom-right {
-    background-color: #787979;
+.shadow-left {
+    background-color: #BAB9C0;
+    height: 400px;
+    margin-left: 666px;
+    margin-top: 43px;
+    position: absolute;
+    width: 20px;
+    z-index: 3;
+}
+
+/** --- Shadows Corners  --- **/
+.shadow-sloping-left-bottom {
+    background-color: #787979db;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: inset -7px 0px 7px 2px #9c9b9b7a;
+    height: 20px;
+    margin-left: 6px;
+    margin-top: 456px;
+    position: absolute;
+    transform: rotateZ(15deg);
+    width: 138px;
+    z-index: 2;
+}
+
+.shadow-sloping-left-top {
+    background-color: #A6A8B1;
+    height: 16px;
+    margin-left: 13px;
+    margin-top: 20px;
+    position: absolute;
+    transform: rotateZ(344deg);
+    width: 142px;
+    z-index: 2;
+}
+
+.shadow-sloping-right-bottom {
+    background-color: #8B8E8E;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
     box-shadow: inset 7px 0px 20px 2px #9c9b9bde;
-    height: 20px;
+    height: 16px;
     margin-left: 541px;
-    margin-top: 449px;
+    margin-top: 454px;
     position: absolute;
-    transform: rotateZ(340deg);
+    transform: rotateZ(344deg);
     width: 138px;
-    z-index: 3;
+    z-index: 2;
 }
+
+.shadow-sloping-right-top {
+    background-color: #A6A8B1;
+    height: 19px;
+    margin-left: 532px;
+    margin-top: 20px;
+    position: absolute;
+    transform: rotateZ(16deg);
+    width: 140px;
+    z-index: 2;
+}
+/** ------- **/
+
+/** --- Shadows Corners  --- **/
+.shadow-corner-left-bottom {
+    background-color: #9E9CAA;
+    height: 20px;
+    margin-left: 3px;
+    margin-top: 428px;
+    position: absolute;
+    transform: rotate(61deg);
+    width: 25px;
+    z-index: 4;
+}
+
+.shadow-corner-left-top {
+    background-color: #BAB9C0;
+    height: 20px;
+    margin-left: 2px;
+    margin-top: 46px;
+    position: absolute;
+    transform: rotate(300deg);
+    width: 25px;
+    z-index: 4;
+}
+
+.shadow-corner-right-bottom {
+    background-color: #B0AFB3;
+    height: 24px;
+    margin-left: 659px;
+    margin-top: 426px;
+    position: absolute;
+    transform: rotate(299deg);
+    width: 24px;
+    z-index: 4;
+}
+
+.shadow-corner-right-top {
+    background-color: #BCB7BD;
+    height: 24px;
+    margin-left: 658px;
+    margin-top: 44px;
+    position: absolute;
+    transform: rotate(324deg);
+    width: 24px;
+    z-index: 4;
+}
+/** ------- **/
