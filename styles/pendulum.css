@@ -222,11 +222,8 @@
     z-index: 3;
 }
 
-.shadow-ventilation-block {
-    background-color: #c9c9cc;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    box-shadow: inset -1px 7px 20px 0px #787979;
+.shadow-ventilation-bottom {
+    background-color: #8B8E8E;
     display: flex;
     flex-direction: row;
     height: 20px;
@@ -238,14 +235,62 @@
     z-index: 2;
 }
 
-.ventilation-block {
-    background-color: #787979;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+.shadow-ventilation-top {
+    background-color: #A6A8B1;
+    display: flex;
+    flex-direction: row;
     height: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    position: relative;
+    justify-content: center;
+    margin-left: 137px;
+    position: absolute;
+    width: 413px;
+    z-index: 2;
+}
+
+.ventilation-block {
+    display: flex;
+    flex-direction: column;
+    height: 21px;
+    justify-content: center;
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 25px;
+}
+
+.block-transparent {
+    background: #fff8dc;
+    height: 2px;
+    width: 25px;
+}
+
+.block-body-bottom {
+    background: #31353a;
+    border-top-color: #575861;
+    border-top-style: solid;
+    border-top-width: 2px;
+    height: 5px;
+    width: 25px;
+}
+
+.block-circle-bottom {
+    background-color: #31353a;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 14px;
+    width: 25px;
+}
+
+.block-body-top {
+    background: #aba1a4;
+    height: 5px;
+    width: 25px;
+}
+
+.block-circle-top {
+    background-color: #6a7384;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 14px;
     width: 25px;
 }
 
@@ -268,12 +313,9 @@
     z-index: 3;
 }
 
-/** --- Shadows Corners  --- **/
+/** --- Shadows Slopings  --- **/
 .shadow-sloping-left-bottom {
-    background-color: #787979db;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-    box-shadow: inset -7px 0px 7px 2px #9c9b9b7a;
+    background-color: #8B8E8E;
     height: 20px;
     margin-left: 6px;
     margin-top: 456px;
@@ -296,9 +338,6 @@
 
 .shadow-sloping-right-bottom {
     background-color: #8B8E8E;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-    box-shadow: inset 7px 0px 20px 2px #9c9b9bde;
     height: 16px;
     margin-left: 541px;
     margin-top: 454px;
